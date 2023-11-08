@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Form</title>
+    <style>
+        /* CSS for the payment form */
+        .payment-form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+        }
+
+        .submit-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0077cc;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #005599;
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment Form</h1>
+    <form class="payment-form">
+        <div class="form-group">
+            <label for="cardholderName">Cardholder Name:</label>
+            <input type="text" id="cardholderName" name="cardholderName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cardExpiry">Card Expiry:</label>
+            <input type="text" id="cardExpiry" name="cardExpiry" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cardCvc">CVC:</label>
+            <input type="number" id="cardCvc" name="cardCvc" required>
+        </div>
+
+        <div class="form-group">
+            <label for="ticketAmount">Ticket Amount:</label>
+            <input type="number" id="ticketAmount" name="ticketAmount" required>
+        </div>
+
+        <!--<a href="/exhibit/payment_message.html" class="submit-button">Submit Payment</a>-->
+        <button type="button" class="submit-button" onclick="showPaymentMessage()">Submit Payment</button>
+    </form>
+    <script>
+        function showPaymentMessage() {
+            // You can customize the message and appearance of the pop-up here
+            alert("Payment received successfully");
+        }
+    </script>
+
+
+    <!-- Include JavaScript for payment processing here (e.g., integration with a payment gateway like Stripe). -->
+</body>
+</html>
